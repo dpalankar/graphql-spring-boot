@@ -1,7 +1,3 @@
-type Query {
-    pets: [Pet]
-}
-
 type Pet {
     id: Int!
     type: Animal!
@@ -15,3 +11,15 @@ enum Animal {
     BADGER
     MAMMOTH
 }
+
+type Query {
+    pets: [Pet],
+    pet(id:Long):Pet
+    
+}
+
+type Mutation {
+    updatePet(id:Long!, name: String!) : Pet!
+}
+
+

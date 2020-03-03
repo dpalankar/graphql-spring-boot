@@ -17,41 +17,68 @@
       <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
       <project.reporting.outputEncoding>UTF-8</project.reporting.outputEncoding>
       <java.version>8</java.version>
+      <graph.version>0.4.1-SNAPSHOT</graph.version>
   </properties>
   
   <dependencies>
         <dependency>
-            <groupId>org.springframework.boot</groupId>
-            <artifactId>spring-boot-starter-web</artifactId>
-        </dependency>
-        <dependency>
-            <groupId>org.springframework.boot</groupId>
-            <artifactId>spring-boot-devtools</artifactId>
-        </dependency>
+			<groupId>com.introproventures</groupId>
+			<artifactId>graphql-jpa-query-autoconfigure</artifactId>
+			<version>${graph.version}</version>
+		</dependency>
+
+		<dependency>
+			<groupId>com.introproventures</groupId>
+			<artifactId>graphql-jpa-query-boot-starter</artifactId>
+			<version>${graph.version}</version>
+		</dependency>
         <dependency>
             <groupId>com.graphql-java</groupId>
             <artifactId>graphql-java-tools</artifactId>
-            <version>4.3.0</version>
+            <version>5.2.4</version>
+            <!-- <version>4.3.0</version> -->
         </dependency>
         <dependency>
             <groupId>com.graphql-java</groupId>
             <artifactId>graphql-spring-boot-starter</artifactId>
-            <version>4.0.0</version>
+            <version>5.0.2</version>
+            <!-- <version>4.0.0</version> -->
         </dependency>
         <dependency>
             <groupId>com.graphql-java</groupId>
             <artifactId>graphiql-spring-boot-starter</artifactId>
-            <version>4.0.0</version>
+            <version>4.0.0</version>	
         </dependency>
+        <!-- GraphQL UI -->
+        <dependency>
+			<groupId>com.introproventures</groupId>
+			<artifactId>graphql-jpa-query-graphiql</artifactId>
+			<version>${graph.version}</version>
+		</dependency>
+		
         <dependency>
             <groupId>org.projectlombok</groupId>
             <artifactId>lombok</artifactId>
             <version>1.16.20</version>
         </dependency>
+        
+        <!-- Spring Dependency -->
+        <dependency>
+            <groupId>org.springframework.boot</groupId>
+            <artifactId>spring-boot-starter-web</artifactId>
+        </dependency>
+        <!-- <dependency>
+            <groupId>org.springframework.boot</groupId>
+            <artifactId>spring-boot-devtools</artifactId>
+        </dependency> -->
+        
+        <!-- JPA -->
         <dependency>
             <groupId>org.springframework.boot</groupId>
             <artifactId>spring-boot-starter-data-jpa</artifactId>
         </dependency>
+        
+        <!-- Mysql -->
         <dependency>
             <groupId>mysql</groupId>
             <artifactId>mysql-connector-java</artifactId>
